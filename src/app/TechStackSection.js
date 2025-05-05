@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function TechStackSection() {
   const skills = [
     { name: "HTML", icon: "/icons/html.svg" },
@@ -23,9 +25,9 @@ export default function TechStackSection() {
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="flex items-center gap-4 bg-white/20 backdrop-blur-md border border-white/30 shadow-[0_4px_30px_rgba(255,255,255,0.3)] rounded-lg p-4 w-50 cursor-default"
+              className="flex items-center gap-4 bg-white/20 backdrop-blur-md border border-white/30 shadow-[0_4px_30px_rgba(255,255,255,0.3)] rounded-lg p-4 w-48 cursor-default"
             >
-              <img src={skill.icon} alt={skill.name} className="w-10 h-10" />
+              <Image src={skill.icon} alt={skill.name} width={40} height={40} />
               <span className="text-lg font-semibold">{skill.name}</span>
             </div>
           ))}
